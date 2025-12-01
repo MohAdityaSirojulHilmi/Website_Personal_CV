@@ -360,4 +360,31 @@ header#home p {
 
 .social-links a:hover {
     background: #555;
+
+}
+
+/* Gaya Khusus untuk Layar di Bawah 600px (Smartphone) */
+@media (max-width: 600px) {
+    /* 1. Atur Ulang Layout Kolom */
+    /* Jika Anda menggunakan grid atau flexbox untuk layout 2 atau 3 kolom,
+       ubah pengaturannya di sini agar menjadi 1 kolom. */
+    .container {
+        flex-direction: column; /* Contoh jika Anda pakai Flexbox */
+        padding: 10px;
+    }
+
+    /* 2. Ubah Ukuran Font */
+    /* Pastikan font tetap terbaca dengan baik */
+    body {
+        font-size: 16px; 
+    }
+    h1 {
+        font-size: 24px;
+    }
+
+    /* 3. Atur Margin/Padding */
+    /* Kurangi margin yang terlalu besar di desktop */
+    .section-header {
+        margin-top: 20px;
+    }
 }
