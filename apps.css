@@ -47,7 +47,7 @@ ul {
 .navbar {
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 90%;
     background: #444343;
     padding: 15px 0;
     z-index: 1000;
@@ -59,7 +59,7 @@ ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 30px;
     margin: 0;
     padding: 0;
 }
@@ -166,8 +166,8 @@ header#home p {
 }
 
 .profile-img {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 5px;
@@ -389,6 +389,7 @@ header#home p {
     background: #555;
 
 }
+
 
 
 
