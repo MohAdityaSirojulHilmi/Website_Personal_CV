@@ -153,7 +153,7 @@ section {
     /* PENTING: Menyesuaikan padding container karena navbar bertumpuk */
     .cv-container {
         /* Nilai disesuaikan agar konten utama tidak tertutup navbar yang sudah bertumpuk */
-        padding-top: 360px; 
+        padding-top: 600px; 
     }
 
     /* 1. Perbaikan Navigasi Bar (Menu Bertumpuk) */
@@ -266,3 +266,4 @@ header#home p { text-align: justify; line-height: 1.6; margin-top: 25px; margin-
 .work-content ul li { margin-bottom: 5px; }
 .ach-content { padding: 20px; border-top: 1px solid #ddd; line-height: 1.7; }
 /* ... (Elemen lain yang tidak ada di sini, jika ada, tambahkan di bagian bawah ini) */
+
