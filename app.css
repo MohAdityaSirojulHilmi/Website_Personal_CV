@@ -183,8 +183,8 @@ header#home p {
     color: #ffffff; 
 }
 
-/* Tombol Toggle Umum (Cert, Edu, Work, Ach) */
-.cert-toggle, .edu-toggle, .work-toggle, .ach-toggle {
+/* Tombol Toggle Umum (Cert, Edu, Work, Project, Ach) */
+.cert-toggle, .edu-toggle, .work-toggle, .project-toggle, .ach-toggle {
     width: 100%;
     background: #333;
     color: white;
@@ -198,12 +198,12 @@ header#home p {
     transition: 0.3s;
 }
 
-.cert-toggle:hover, .edu-toggle:hover, .work-toggle:hover, .ach-toggle:hover {
+.cert-toggle:hover, .edu-toggle:hover, .work-toggle:hover, .project-toggle:hover, .ach-toggle:hover {
     background: #444;
 }
 
 /* Konten Toggle */
-.cert-content, .edu-detail, .work-content, .ach-content {
+.cert-content, .edu-detail, .work-content, .project-content, .ach-content {
     display: none;
     padding: 10px 15px;
     background: #f5f5f5;
@@ -235,6 +235,12 @@ header#home p {
 .work-content { padding: 20px; border-top: 1px solid #ddd; line-height: 1.6; }
 .work-content ul { padding-left: 20px; margin: 10px 0; }
 .work-content ul li { margin-bottom: 5px; }
+
+/* Project */
+.project-item { margin-bottom: 15px; border-radius: 8px; overflow: hidden; border: 1px solid #e0e0e0; }
+.project-content { padding: 20px; border-top: 1px solid #ddd; line-height: 1.6; }
+.project-content ul { padding-left: 20px; margin: 10px 0; }
+.project-content ul li { margin-bottom: 5px; }
 
 /* Achievement */
 .ach-category-title { font-size: 20px; margin: 25px 0 10px; font-weight: bold; color: #333; }
@@ -353,7 +359,7 @@ header#home p {
     }
     
     /* 3. Elemen Toggle */
-    .cert-toggle, .edu-toggle, .work-toggle, .ach-toggle {
+    .cert-toggle, .edu-toggle, .work-toggle, .project-toggle, .ach-toggle {
         font-size: 14px;
         padding: 10px;
         text-align: center; /* Pusatkan tombol agar lebih rapi */
