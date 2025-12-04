@@ -16,6 +16,7 @@
         <li><a href="#certifications">Certifications</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#work-experience">Work And Experience</a></li>
+        <li><a href="#project">Project</a></li>
         <li><a href="#achievement">Achievement</a></li>
         <li><a href="#social-media">Social Media And Business</a></li>
     </ul>
@@ -289,6 +290,105 @@
         </div>
     </section>
 
+    <section id="project" class="project">
+        <h2>Project</h2>
+
+        <div class= "project-item">
+            <button class="project-toggle">
+                Projek artikel "Sistem Identifikasi Faktor Risiko Kesehatan Maternal Dengan Outlier Handling IsoForest 
+                Menggunakan Metode Kernel Extreme Learning Machine".
+                <i class="fas fa-caret-down toggle-icon"></i>
+            </button>
+            <div class="project-content">
+                <p><strong>Duration:</strong> Januari-Maret 2025</p>
+                <p><strong>Role:</strong>Penulis utama</p>
+
+                <p><strong>Description:</strong></p>
+                <ul>
+                    Menyusun artikel ilmiah yang mengembangkan sistem identifikasi faktor risiko kesehatan maternal 
+                    menggunakan metode Kernel Extreme Learning Machine (KELM) dengan penanganan outlier melalui Isolation Forest. 
+                    Proyek ini mencakup pengolahan data berbasis IoT, normalisasi, deteksi outlier, pelatihan model, 
+                    serta evaluasi performa menggunakan confusion matrix untuk memperoleh hasil klasifikasi yang lebih akurat dan stabil.
+            </div>
+        </div>
+
+        <div class= "project-item">
+            <button class="project-toggle">
+                Dashboard realtime BMKG Tanjung Perak.
+                <i class="fas fa-caret-down toggle-icon"></i>
+            </button>
+            <div class="project-content">
+                <p><strong>Duration:</strong> Februari-Juni 2024</p>
+                <p><strong>Role:</strong> Analis Data-Pengembang Dashboard</p>
+
+                <p><strong>Description:</strong></p>
+                <ul>
+                    Membuat dashboard realtime untuk memantau parameter seperti tinggi gelombang laut, kecepatan angin, 
+                    dan arah angin melalui data pengamatan dan data satelit himawari BMKG Tanjung Perak,
+                    sehingga mempermudah pengamatan dan visualisasi data secara operasional untuk panduan warga setempat.
+                </ul>
+            </div>
+        </div>
+
+        <div class= "project-item">
+            <button class="project-toggle">
+                Projek artikel "Classification Of Potential Cumulonimbus In Bali Strait Using Cnn Resnet50 On Himawari-9 Images".
+                <i class="fas fa-caret-down toggle-icon"></i>
+            </button>
+            <div class="project-content">
+                <p><strong>Duration:</strong> Februari-Juni 2024</p>
+                <p><strong>Role:</strong>Penulis utama</p>
+
+                <p><strong>Description:</strong></p>
+                <ul>
+                    Menyusun artikel ilmiah yang membahas klasifikasi potensi awan Cumulonimbus di Selat Bali
+                    menggunakan model CNN ResNet50 dengan citra satelit Himawari-9. 
+                    Proyek ini meliputi pengolahan data citra, penerapan deep learning, 
+                    evaluasi performa model, serta interpretasi hasil untuk mendukung analisis 
+                    cuaca dan potensi cuaca ekstrem.
+                </ul>
+            </div>
+        </div>
+
+        <div class= "project-item">
+            <button class="project-toggle">
+                Projek artikel "Eksplorasi Etnomatika dalam Tatanan Bangun Ruang dan 
+                Bangun Datar Pada Kawasan Alun-Alun Kota Surabaya".
+                <i class="fas fa-caret-down toggle-icon"></i>
+            </button>
+            <div class="project-content">
+                <p><strong>Duration:</strong> Agustus-September 2024</p>
+                <p><strong>Role:</strong>Penulis utama</p>
+
+                <p><strong>Description:</strong></p>
+                <ul>
+                    Menyusun artikel ilmiah yang mengeksplorasi unsur etnomatika pada pola bangun ruang 
+                    dan bangun datar di Kawasan Alun-Alun Kota Surabaya. Kajian ini mencakup identifikasi bentuk-bentuk geometris 
+                    dalam arsitektur dan tata ruang kawasan, analisis keterkaitan dengan konsep matematika, 
+                    serta penyusunan interpretasi etnomatika yang dapat digunakan sebagai referensi dalam pendidikan matematika berbasis budaya.
+                </ul>
+            </div>
+        </div>
+
+        <div class= "project-item">
+            <button class="project-toggle">
+                Projek artikel "Pemodelan Matematika Pada Penyebaran Penyakit Tuberculosis Di Provinsi Jawa Timur".
+                <i class="fas fa-caret-down toggle-icon"></i>
+            </button>
+            <div class="project-content">
+                <p><strong>Duration:</strong> Mei-Agustus 2024</p>
+                <p><strong>Role:</strong>Penulis ketiga</p>
+
+                <p><strong>Description:</strong></p>
+                <ul>
+                    Menyusun artikel ilmiah yang membahas pemodelan matematika untuk menganalisis dinamika penyebaran penyakit Tuberculosis di Provinsi Jawa Timur. 
+                    Penelitian meliputi penyusunan model diferensial SITR, penentuan parameter epidemiologis, analisis kestabilan, 
+                    serta interpretasi hasil untuk memahami pola penyebaran dan potensi pengendalian penyakit. Kajian ini bertujuan memberikan gambaran kuantitatif yang dapat dijadikan dasar dalam upaya mitigasi dan perencanaan kebijakan kesehatan.
+                </ul>
+            </div>
+        </div>
+    </section>
+
     <section id="achievement" class="achievement">
         <h2>Achievements</h2>
 
@@ -426,6 +526,25 @@
     });
 </script>
 
+<script> 
+    const projectToggles = document.querySelectorAll('.project-toggle');
+
+    projectToggles.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const content = btn.nextElementSibling;
+            const icon = btn.querySelector('.toggle-icon');
+
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                icon.style.transform = "rotate(0deg)";
+            } else {
+                content.style.display = "block";
+                icon.style.transform = "rotate(180deg)";
+            }
+        });
+    });
+</script>
+
 <script>
     const achToggles = document.querySelectorAll('.ach-toggle');
 
@@ -486,6 +605,7 @@
 
 </body>
 </html>
+
 
 
 
